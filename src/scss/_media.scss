@@ -1,0 +1,56 @@
+@media (max-width: 1180px) {
+  
+  .menu--active {
+    .menu__list {
+      transform: translateY(0);
+    }
+  }
+  .menu {
+    &__list {
+      padding: 50px 0;
+      position: absolute;
+      top: 120px;
+      left: 0;
+      right: 0;
+      display: block;
+      text-align: center;
+      background-color: #fff;
+      transform: translateY(-200%);
+      transition: all .7s;
+    }
+    &__icon {
+      display: block;
+    }
+    &__item {
+      color: $default;
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+      path {
+        fill: $default;
+      }
+    }
+    &__item-btn {
+      padding: 15px 0;
+    }
+    &__link {
+      display: inline-block;
+      padding: 15px 0;
+      &:hover {
+        border-bottom: 2px solid $default;
+      }
+    }
+  }
+  .dropdown {
+    left: 58%;
+    top: 10px;
+    background-color: #fff;
+    &__link:hover {
+      background-color: rgba(43, 36, 36, 0.4);
+      color: #fff;
+    }
+  }
+  .list-icon--active {
+    transform: rotate(25deg);
+  }
+}

@@ -1,0 +1,29 @@
+$default: #2B2424;
+$accent: #43BA54;
+$second: #645739;
+$gold: linear-gradient(133.21deg, #B48811 4.84%, #BB9B49 68.91%);
+
+%hyundai-700 {
+  font-family: 'HyundaiSansHeadOffice-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%montserrat-700 {
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%montserrat-600 {
+  font-family: 'Montserrat-SemiBold', sans-serif;
+  font-weight: 600;
+}
+
+%montserrat-500 {
+  font-family: 'Montserrat-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%montserrat-400 {
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-weight: 400;
+}

@@ -7,7 +7,68 @@
   <link rel="stylesheet" href="css/style.min.css">
   <title>Каркасные дома</title>
 </head>
-<body>
+<body id="body">
+  <header class="header">
+    <div class="header__menu">
+      <div class="container">
+        <div class="header__inner">
+          <div class="logo">
+            <a class="logo__link" href="#body">
+              <img class="logo__img" src="images/logo.svg" alt="логотип">
+            </a>
+            <p>Строим долговечные дома для комфортной жизни</p>
+          </div>
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__item is-current">
+                  <a class="menu__link" href="#">Главная</a>
+                </li>
+                <li class="menu__item is-drop">
+                  <button class="menu__item-btn">Проекты</button>
+                  <svg class="list-icon" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 11.5L0.937822 0.25L13.0622 0.25L7 11.5Z" fill="white" />
+                  </svg>
+                  <div class="dropdown">
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#">Популярные</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#">Последние</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a class="dropdown__link" href="#">Все проекты</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">О нас</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Акции</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__contact">
+              <a class="header__link contact-social" href="#">Написать в Whatsapp</a>
+              <a class="header__link contact-tel" href="tel:+79999999999">+7 (999) 999-9999</a>
+            </div>
+            <a class="call-link" href="#">заказать звонок</a>
+            <a class="menu__icon" href="#">
+              <img src="images/icons/burger.svg" alt="меню бургер">
+            </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+  </main>
   
   <script src="js/main.min.js"></script>
 </body>
