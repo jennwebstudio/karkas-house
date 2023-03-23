@@ -1,0 +1,185 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+.header {
+  width: 100vw;
+  max-height: 900px;
+  background-image: url('../images/header-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  &__container {
+    position: relative;
+  }
+
+  &__menu {
+    width: 100%;
+    background-color: rgba(43, 36, 36, 0.6);
+  }
+
+  &__inner {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    display: block;
+    color: #fff;
+  }
+
+  &__hero-content {
+    max-width: 740px;
+    padding: 145px 0 250px 30px;
+  }
+
+  &__title {
+    @extend %hyundai-700;
+    font-size: 40px;
+    line-height: 49px;
+    color: $second;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  &__subtitle {
+    @extend %montserrat-500;
+    font-size: 24px;
+    line-height: 29px;
+    max-width: 650px;
+    margin-bottom: 70px;
+  }
+
+  &__btn {
+    width: 380px;
+    padding: 25px 70px;
+    @extend %montserrat-700;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    font-size: 20px;
+  }
+}
+
+.menu {
+  @extend %montserrat-500;
+
+  &__list {
+    display: flex;
+    z-index: 10;
+  }
+
+  &__item {
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+    line-height: 24px;
+    transition: all .3 ease;
+
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+
+    &:hover {
+      border-bottom: 2px solid #fff;
+    }
+  }
+
+  .arrow-icon {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #fff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+
+  &__item-btn {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: inherit;
+    padding-right: 20px;
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+  &__icon {
+    display: none;
+    position: relative;
+    z-index: 2;
+  }
+  &-call {
+    display: none;
+  }
+}
+
+.is-current {
+  border-bottom: 2px solid #fff;
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 120px;
+  background-color: rgba(43, 36, 36, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 10px 10px;
+    color: inherit;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__link:hover {
+    background-color: #fff;
+    color: $default;
+  }
+}
+
+.dropdown--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.arrow-icon.arrow-icon--active {
+  transform: rotate(-180deg);
+}
+
+.contact-social {
+  padding: 3px 0 3px 38px;
+  background-image: url('../images/icons/whatsapp.svg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.contact-tel {
+  font-size: 20px;
+}
+
+.social-list {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  gap: 28px;
+}
+
