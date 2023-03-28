@@ -18,6 +18,7 @@ const uglify  = require("gulp-uglify");
 const js = () => {
 	return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
     path.js.src
   ])
   .pipe(concat("main.min.js"))

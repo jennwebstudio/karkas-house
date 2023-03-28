@@ -22,6 +22,14 @@ $(function () {
     $('.menu').toggleClass('menu--active');
   });
 
+  // слайдер hero
 
+  $('.header__hero-slider').slick({
+    arrows: false,
+    infinite: true,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 7000,
+  });
 
 });

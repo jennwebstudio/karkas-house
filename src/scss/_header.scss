@@ -4,20 +4,20 @@
 @import 'global';
 
 .header {
+  position: relative;
   width: 100vw;
-  max-height: 900px;
-  background-image: url('../images/header-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-
+  height: 900px;
+  
   &__container {
     position: relative;
+    height: 100%;
   }
 
   &__menu {
+    position: sticky;
     width: 100%;
     background-color: rgba(43, 36, 36, 0.6);
+    z-index: 10;
   }
 
   &__inner {
@@ -32,9 +32,20 @@
     color: #fff;
   }
 
+  &__hero-slider {
+    margin-top: -120px;
+  }
+
+  &__hero {
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+
   &__hero-content {
     max-width: 740px;
-    padding: 145px 0 250px 30px;
+    padding: 265px 0 0 30px;
   }
 
   &__title {
@@ -175,11 +186,16 @@
   font-size: 20px;
 }
 
-.social-list {
+ul.social-list {
   position: absolute;
+  left: 60px;
   bottom: 30px;
-  left: 30px;
   display: flex;
   gap: 28px;
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
 }
 
