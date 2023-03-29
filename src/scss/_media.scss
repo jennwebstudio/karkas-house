@@ -59,24 +59,30 @@
 
 @media (max-width: 980px) {
   .header {
-    max-height: 800px;
+    height: 800px;
+    &__hero {
+      height: 800px;
+      background-position: bottom center;
+    }
     &__hero-content {
       max-width: 600px;
-      padding: 60px 0 150px 10px;
+      padding: 180px 0 0 10px;
     }
   }
-  .social-list {
-    left: 10px;
+  ul.social-list {
+    left: 40px;
   }
 }
 
 @media (max-width: 680px) {
   .header {
-    max-height: 700px;
-    background-image: url('../images/header-bg-680px.jpg');
+    height: 700px;
+    &__hero {
+      height: 700px;
+    }
     &__hero-content {
       max-width: 100%;
-      padding: 50px 0 100px 0;
+      padding: 170px 0 0;
       text-align: center;
     }
     &__title {
@@ -93,8 +99,9 @@
       margin: 0 auto 30px;
     }
   }
-  .social-list {
+  ul.social-list {
     left: calc(50% - 92px);
+    bottom: 10px;
   }
 }
 
