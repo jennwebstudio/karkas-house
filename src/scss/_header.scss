@@ -7,6 +7,7 @@
   position: relative;
   width: 100vw;
   height: 900px;
+  margin-bottom: 100px;
   
   &__container {
     position: relative;
@@ -67,7 +68,7 @@
 
   &__btn {
     width: 380px;
-    padding: 25px 70px;
+    padding: 25px auto;
     @extend %montserrat-700;
     font-size: 20px;
     margin-bottom: 30px;
