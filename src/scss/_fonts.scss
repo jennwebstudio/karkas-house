@@ -48,5 +48,12 @@
   font-display: swap;
 }
 
-
-
+@font-face {
+  font-family: 'Montserrat-SemiBoldItalic';
+  font-weight: 600;
+  font-style: italic;
+  src: local('Montserrat-SemiBoldItalic'),
+    url('../fonts/Montserrat-SemiBoldItalic.woff2') format(woff2),
+    url('../fonts/Montserrat-SemiBoldItalic.woff') format(woff);
+  font-display: swap;
+}

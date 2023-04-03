@@ -52,21 +52,54 @@ h1.dark-theme {
   font-size: 12px;
 }
 
-.call-link {
-  display: block;
-  width: 190px;
-  padding: 12px 25px;
+.solid-button {
   background-color: $accent;
   color: #fff;
-  @extend %montserrat-600;
-  font-size: 14px;
   text-align: center;
   box-shadow: 0px 2px 6px rgba(67, 186, 84, 0.5);
   border-radius: 8px;
   transition: all .3 ease;
 }
 
-.call-link:hover {
+.solid-button:hover {
   box-shadow: -5px -5px 15px rgba(67, 186, 84, 0.5), 5px 5px 15px rgba(67, 186, 84, 0.5);
 }
+
+.call-link {
+  display: block;
+  padding: 12px 25px;
+  @extend %montserrat-600;
+  font-size: 14px;
+}
+
+@media (max-width: 1280px) {
+  .section-offset {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 980px) {
+  .section-offset {
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 680px) {
+  .section-offset {
+    padding-bottom: 40px;
+  }
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .call-link {
+    display: none;
+  }
+  .title {
+    font-size: 18px;
+  }
+}
+
 

@@ -1,0 +1,88 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+.why {
+  padding-top: 45px;
+
+  &__title {
+    max-width: 680px;
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 45px;
+  }
+
+  &__description {
+    flex-basis: calc(50% - 25px);
+  }
+
+  &__video {
+    flex-basis: calc(50% - 25px);
+    display: flex;
+    flex-direction: column;
+    padding: 54px 28px 22px;
+    border: 4px solid $golden;
+    border-radius: 8px;
+    span {
+      @extend %montserrat-500;
+      font-size: 20px;
+      align-self: flex-end;
+    }
+  }
+
+  &__video-popup {
+    min-height: 335px;
+    background: url('../images/why/video-bg.jpg') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  &__video-link {
+    color: $accent;
+    transition: color .3s linear;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $golden;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 88%;
+    margin: 0 auto 10px;
+    text-align: center;
+    @extend %montserrat-600i;
+    font-size: 20px;
+    color: $second;
+  }
+
+  &__info {
+    padding-top: 75px;
+    background: url('../images/why/why-bg.jpg') no-repeat center/cover;
+  }
+
+  &__info-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info-list {
+    flex-basis: 352px;
+  }
+
+  &__info-item {
+    text-align: center;
+  }
+
+  &__info-img {
+    margin: 0 auto;
+  }
+}

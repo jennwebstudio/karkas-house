@@ -63,7 +63,7 @@
     /* ------------ popular section  --------------------*/
 
   .popular {
-
+    
     &__content {
       padding: 40px 20px 30px;
     }
@@ -100,6 +100,7 @@
   /* ------------ popular section  --------------------*/
 
   .popular {
+    padding-top: 40px;
     &__list {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -126,11 +127,9 @@
     }
     &__title {
       font-size: 32px;
-      line-height: 36px;
     }
     &__subtitle {
       font-size: 20px;
-      line-height: 24px;
       max-width: 100%;
       margin-bottom: 50px;
     }
@@ -146,19 +145,17 @@
   /* ------------ popular section  --------------------*/
 
   .popular {
+    
     &__header {
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      gap: 20px;
+      display: block;
+      text-align: center;
     }
     &__title {
       width: 100%;
-      text-align: center;
-      flex-basis: 80px;
+      margin-bottom: 17px;
     }
     &__link {
-      margin: 0 auto;
+      display: inline-block;
     }
     &__list {
       grid-template-columns: repeat(1, 1fr);
@@ -169,20 +166,23 @@
 @media (max-width: 480px) {
 
   /* ------------ header section  --------------------*/
-  .header {    
+  .header { 
+    margin-bottom: 0;
     &__title {
-      font-size: 24px;
-      line-height: 30px;
+      font-size: 20px;
     }
-    &__subtitle {
-      font-size: 18px;
-      line-height: 24px;
+    &__subtitle,
+    &__description {
+      font-size: 16px;
     }
     &__btn {
-      width: 250px;
-      padding: 10px 15px;
-      font-size: 18px;
+      padding: 12px 32px;
+      font-size: 14px;
     }
+  }
+
+  ul.social-list {
+    display: none;
   }
 
   /* ------------ popular section  --------------------*/
@@ -197,6 +197,10 @@
     }
     &__content {
       text-align: center;
+    }
+    &__title {
+      text-align: left;
+      max-width: 212px;
     }
   }
 }

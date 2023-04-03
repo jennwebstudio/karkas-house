@@ -89,6 +89,13 @@
     font-size: 14px;
     line-height: 1.2;
     margin-top: 5px;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $golden;
+        color: #fff;
+      }
+    }
   }
 }
 
