@@ -94,6 +94,9 @@ h1.dark-theme {
 }
 
 @media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
   .call-link {
     display: none;
   }
