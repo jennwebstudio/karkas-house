@@ -1,46 +1,57 @@
-$(function () {
+
+  const isDrop = document.querySelector('.is-drop');
+  const dropDown = document.querySelector('.dropdown');
+  const arrowIcon = document.querySelector('.arrow-icon');
+  const menu = document.querySelector('.menu');
+  const menuIcon = document.querySelector('.menu__icon');
+
   // dropdown меню
-    
-  $('.is-drop').on('click', function () {
-    $('.dropdown').toggleClass('dropdown--active');
-    $('.arrow-icon').toggleClass('arrow-icon--active');
+
+  isDrop.addEventListener('click', () => {
+    dropDown.classList.toggle('dropdown--active');
+    arrowIcon.classList.toggle('arrow-icon--active');
   });
 
-  $(document).on('click', function (e) { // событие клика по веб-документу
-		const menu = $('.menu'),
-          drop = $('.dropdown');
-		if ( !menu.is(e.target) & menu.has(e.target).length === 0 ) { 
+  document.addEventListener('click', (e) => {   // событие клика по веб-документу
+    if (!e.target.closest('.menu')) {
       //  если клик был не по menu, не по его дочерним элементам
-			drop.removeClass('dropdown--active');
-      $('.arrow-icon').removeClass('arrow-icon--active');
-		}
-	});
+      dropDown.classList.remove('dropdown--active');
+      arrowIcon.classList.remove('arrow-icon--active');
+    }
+  });
   
   // мобильное меню
 
-  $('.menu__icon, .menu a').on('click', function () {
-    $('.menu').toggleClass('menu--active');
+  menuIcon.addEventListener('click', () => {
+    menu.classList.toggle('menu--active');
+  });
+
+  const links = Array.from(menu.children);
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('menu--active');
+    });
   });
 
   // слайдер hero
 
-  $('.header__hero-slider').slick({
-    arrows: false,
-    infinite: true,
-    fade: true,
-    autoplay: true,
-    autoplaySpeed: 7000,
-  });
+  const initSlider = () => {
+    new Swiper ('.swiper', {
+      
+      loop: true,
+      slidesPerView: 1,
+      autoplay: {
+        delay: 10000,
+      },
+      effect: 'fade',
+    });
+  };
 
+  initSlider();
+  
   // видео 
 
-  $('.why__video-link').magnificPopup({
-		disableOn: 700,
-		type: 'iframe',
-		mainClass: 'mfp-fade',
-		removalDelay: 160,
-		preloader: false,
-		fixedContentPos: false
-	});
+  
 
-});
+
+  
