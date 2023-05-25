@@ -1,0 +1,53 @@
+.consultation {
+  background: url('../images/consultation-bg.jpg') center/cover no-repeat;
+  overflow: hidden;
+
+  &__container {
+    height: 100%;
+    min-height: 650px;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: url('../images/specialist.png') center/cover no-repeat;
+      width: 650px;
+      height: 604px;
+      bottom: 0;
+      right: -90px;
+    }
+  }
+
+  &__inner {
+    padding: 25px 0 25px 55px;
+    display: flex;
+    gap: 45px;
+  }
+
+  &__specialist {
+    padding-top: 25px;
+    flex-basis: 48%;
+    @extend %montserrat-500;
+    font-size: 24px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    @extend %montserrat-700;
+    color: $second;
+    margin-bottom: 10px;
+  }
+
+  &__pro {
+    margin-bottom: 9px;
+  }
+
+  &__experience {
+    max-width: 202px;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,101 @@
+.form {
+  max-width: 604px;
+  padding: 27px;
+  border: 2px solid #FFFFFF;
+  border-radius: 8px;
+
+  &__body {
+    padding: 25px 75px 55px;
+    background-color: $bg;
+    border: 4px solid $golden;
+    border-radius: 8px;
+    @extend %montserrat-500;
+  }
+
+  &__title {
+    font-size: 22px;
+    margin-bottom: 35px;
+    span {
+      color: $accent;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__social {
+    &-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+
+    &-item {
+      width: 66px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-link {
+      display: block;
+      background-color: $bg;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 50px;
+      height: 50px;
+      border: 1px solid $accent;
+      border-radius: 50%;
+      margin-bottom: 9px;
+      transition: background-color .3s ease;
+
+      &:hover {
+        background-color: #ECEBEB;
+      }
+
+      &-whatsapp {
+        background-image: url('../images/icons/whatsapp-form.svg');
+      }
+
+      &-telegram {
+        background-image: url('../images/icons/telegram-form.svg');
+      }
+
+      &-viber {
+        background-image: url('../images/icons/viber-form.svg');
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    outline: 0;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid $golden;
+    box-shadow: inset -2px -2px 5px rgba(180, 136, 17, 0.5), inset 2px 2px 5px rgba(180, 136, 17, 0.5);
+    border-radius: 8px;
+  }
+
+  &__btn {
+    display: block;   
+    padding: 12px 24px;
+    @extend %montserrat-600;
+    font-size: 14px;
+    margin: 0 auto 40px;
+  }
+
+  &__privacy {
+    text-align: center;
+    font-size: 14px;
+    a {
+      color: $accent;
+      text-decoration: underline;;
+    }
+  }
+}

@@ -4,6 +4,7 @@ body {
 }
 
 body {
+  min-width: 320px;
   display: flex;
   flex-direction: column;
   color: $default;
@@ -53,6 +54,8 @@ h1.dark-theme {
 }
 
 .solid-button {
+  outline: 0;
+  border: 0;
   background-color: $accent;
   color: #fff;
   text-align: center;
