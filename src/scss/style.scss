@@ -1,9 +1,15 @@
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
 
 @import 'header';
 @import 'popular';
 @import 'why';
 @import 'form';
 @import 'consultation';
+@import 'steps';
 
 
 @import 'media';

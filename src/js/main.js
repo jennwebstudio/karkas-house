@@ -51,7 +51,21 @@
   
   // видео 
 
-  
+  // slider steps
+
+  let slider = $('.steps__inner');
+
+  slider.slick({
+    infinite: false,
+    dots: true,
+    prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrow.svg" alt="left arrow"></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrow.svg" alt="right arrow"></button>',
+    customPaging : function(slider, i) {
+      var thumb = $(slider.$slides[i]).data();
+
+      return 'этап ' + (i + 1);
+    },
+  });
 
 
   
