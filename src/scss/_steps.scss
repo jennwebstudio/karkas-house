@@ -2,15 +2,27 @@
   padding-top: 40px;
 
   &__title {
+    max-width: 420px;
     margin-bottom: 50px;
   }
 
   &__inner {
     padding: 97px 80px 0;
+    margin-bottom: 50px;
   }
 
   &__item {
     padding: 0 10px;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    width: 270px;
+    height: 50px;
+    text-align: center;
+    padding: 15px;
+    @extend %montserrat-600;
   }
 }
 
@@ -23,6 +35,8 @@
     width: 50%;
     filter: drop-shadow(-4px 0px 5px rgba(0, 0, 0, 0.15)) drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.15));
     img {
+      width: 100%;
+      object-fit: cover;
       border-radius: 8px 0px 0px 8px;
     }
   }
@@ -55,11 +69,11 @@
 .slick-dots {
   position: absolute;
   top: 0;
-  width: 1130px;
+  max-width: 100%;
   display: flex;
-  justify-content: space-between;
-  gap: 22px;
-  margin-bottom: 50px;
+  justify-content: center;
+  gap: 45px;
+  //margin-bottom: 50px;
 
   li {
     width: 150px;
@@ -88,11 +102,10 @@
   cursor: pointer;
   position: absolute;
   top: 50%;
-  transform: translateY(30%);
 }
 
 .slick-prev {
-  transform: translateY(30%) rotate(-180deg);
+  transform: rotate(-180deg);
   left: -32px;
 }
 

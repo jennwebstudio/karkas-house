@@ -12,7 +12,7 @@
     arrowIcon.classList.toggle('arrow-icon--active');
   });
 
-  document.addEventListener('click', (e) => {   // событие клика по веб-документу
+  document.addEventListener('click', (e) => {   
     if (!e.target.closest('.menu')) {
       //  если клик был не по menu, не по его дочерним элементам
       dropDown.classList.remove('dropdown--active');
@@ -65,6 +65,21 @@
 
       return 'этап ' + (i + 1);
     },
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 1180,
+        settings: {
+          arrows: false,
+        }
+      },
+      
+    ]
   });
 
 
