@@ -304,6 +304,22 @@
       }
     }
   }
+
+  /* ------------ action section  --------------------*/
+
+  .action {
+    &__content {
+      max-width: 100%;
+      margin: 0 auto;
+      align-items: center;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__time {
+      align-self: flex-end;
+    }
+  }
 }
 
 @media (max-width: 680px) {
@@ -395,6 +411,42 @@
 
   .form {
     max-width: 100%;
+  }
+
+  /* ------------ action section  --------------------*/
+  
+  .action {
+    background-image: url('../images/action-bg680.jpg');
+    background-position: right center;
+    padding: 35px 0 60px;
+    &__content {
+      max-width: 283px;
+      margin: 0 auto 0 18px;
+      align-items: flex-start;
+    }
+    &__suptitle {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    &__title {
+      font-size: 16px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    &__sale {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    &__btn {
+      padding: 12px 34px;
+      font-size: 14px;
+      margin-bottom: 10px;
+      align-self: center;
+    }
+    &__time {
+      font-size: 13px;
+      align-self: flex-start;
+    }
   }
 }
 
