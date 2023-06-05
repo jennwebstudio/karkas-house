@@ -11,6 +11,9 @@
 
   &__title {
     flex-basis: 377px;
+    &_built {
+      flex-basis: 510px;
+    }
   }
 
   &__link {
@@ -118,10 +121,28 @@
           color: $accent;
         }
       }
+    
+    &_built {
+      max-width: 300px;
+    }
   }
 
   &__description {
     margin-bottom: 28px;
+    span {
+      color: $accent;
+    }
+  }
+
+  &__name {
+    span {
+      color: $accent;
+    }
+  }
+
+  &__location {
+    padding-top: 15px;
+    color: $second;
   }
 
   &__price {

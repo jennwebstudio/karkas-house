@@ -1,0 +1,89 @@
+.contact {
+  position: relative;
+  background-image: url('../images/contact-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 65px 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+  }
+
+  &__form {
+    width: 50%;
+  }
+
+  &__info {
+    width: 50%;
+    padding: 27px 60px;
+    font-size: 20px;
+  }
+
+  &__title {
+    @extend %hyundai-700;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 55px;
+    
+    span {
+      color: $accent;
+    }
+  }
+
+  &__address {
+    margin-bottom: 55px;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+
+    &-title {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: $default;
+      transition: all .3s ease;
+      &:hover {
+        color: $accent;
+        text-transform: underline;
+      }
+    }
+  }
+
+  &__messenger {
+    display: block;
+    color: $default;
+    margin: 40px 0 30px;
+    padding-left: 38px;
+    background: url('../images/icons/whatsapp.svg') no-repeat;
+    transition: color .3s ease;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 50%;
+    padding: 12px 34px;
+    margin: 0 auto;
+  }
+
+  &__messenger,
+  &__btn {
+    display: none;
+  }
+}

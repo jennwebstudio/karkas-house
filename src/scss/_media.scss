@@ -187,6 +187,52 @@
       font-size: 20px;
     }
   }
+
+  /* ------------  action sction --------------------*/
+
+  .action {
+    &__content {
+
+    }
+  }
+
+  /* ------------  form  --------------------*/
+
+  .form {
+    &__fieldset {
+      margin-bottom: 10px;
+    }
+  }
+
+  /* ------------ excursion form  --------------------*/
+
+  .excursion {
+    padding: 20px 10px;
+    &__form {
+      &-title {
+        margin-bottom: 0;
+      }
+    }
+
+    .form__input {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .form__btn {
+      margin-bottom: 0;
+    }
+  }
+
+  /* ------------ contact section  --------------------*/
+
+  .contact {
+    background-position: right 35% bottom;
+    &__info {
+      padding: 0 20px;
+    }
+  }
 }
 
 @media (max-width: 980px) {
@@ -320,6 +366,30 @@
       align-self: flex-end;
     }
   }
+
+    /* ------------ contact section  --------------------*/
+  
+    .contact {
+      background-position: left bottom;
+      padding: 40px 0;
+
+      &::before {
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+      &__form {
+        display: none;
+      }
+      &__info {
+        width: 100%;
+      }
+      &__title {
+        max-width: 530px;
+      }
+      &__messenger,
+      &__btn {
+        display: block;
+      }
+    }
 }
 
 @media (max-width: 680px) {
@@ -545,6 +615,8 @@
   .popular {
     &__item {
       max-width: 100%;
+      max-height: none;
+      height: auto;
     }
     &__link,
     &__item-link {
@@ -595,6 +667,35 @@
     &__num {
       font-size: 24px;
       margin-bottom: 2px;
+    }
+  }
+
+  /* ------------ contact section --------------------*/
+
+  .contact {
+    &__info {
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 10px;
+    }
+    &__title {
+      max-width: 100%;
+      text-align: left;
+      font-size: 16px;
+      margin-bottom: 45px;
+    }
+    &__address {
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+    &__messenger {
+      display: inline-block;
+      margin: 20px 0 25px;
+    }
+    &__btn {
+      width: 190px;
+      height: 40px;
+      font-size: 14px;
     }
   }
 }

@@ -71,6 +71,12 @@
     }
   }
 
+  &__fieldset {
+    padding: 0;
+    border: 0;
+    margin-bottom: 10px;
+  }
+
   &__input {
     width: 100%;
     outline: 0;
@@ -80,6 +86,10 @@
     border: 1px solid $golden;
     box-shadow: inset -2px -2px 5px rgba(180, 136, 17, 0.5), inset 2px 2px 5px rgba(180, 136, 17, 0.5);
     border-radius: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__btn {

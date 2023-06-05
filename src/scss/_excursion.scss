@@ -1,0 +1,36 @@
+.excursion {
+  padding: 30px 30px 20px;
+  height: 100%;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+
+    &-title {
+      @extend %montserrat-700;
+      color: $second;
+      text-transform: uppercase;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    &-subtitle {
+      font-size: 15px;
+    }
+  }
+
+  .form__input {
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__btn {
+    margin-bottom: 25px;
+  }
+}
