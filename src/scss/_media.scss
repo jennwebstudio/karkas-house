@@ -369,27 +369,41 @@
 
     /* ------------ contact section  --------------------*/
   
-    .contact {
-      background-position: left bottom;
-      padding: 40px 0;
+  .contact {
+    background-position: left bottom;
+    padding: 40px 0;
 
-      &::before {
-        background-color: rgba(255, 255, 255, 0.7);
-      }
-      &__form {
-        display: none;
-      }
-      &__info {
-        width: 100%;
-      }
-      &__title {
-        max-width: 530px;
-      }
-      &__messenger,
-      &__btn {
-        display: block;
-      }
+    &::before {
+      background-color: rgba(255, 255, 255, 0.7);
     }
+    &__form {
+      display: none;
+    }
+    &__info {
+      width: 100%;
+    }
+    &__title {
+      max-width: 530px;
+    }
+    &__messenger,
+    &__btn {
+      display: block;
+    }
+  }
+
+  /* ------------ footer  --------------------*/
+
+  .footer {
+    &__logo,
+    &__info {
+      display: none;
+    }
+    &__link {
+    &_up {
+      padding-left: 35px;
+    }
+  }
+  }
 }
 
 @media (max-width: 680px) {
@@ -516,6 +530,15 @@
     &__time {
       font-size: 13px;
       align-self: flex-start;
+    }
+  }
+
+  /* ------------ footer  --------------------*/
+  
+  .footer {
+    height: 315px;
+    &__center {
+      gap: 60px;
     }
   }
 }
@@ -696,6 +719,31 @@
       width: 190px;
       height: 40px;
       font-size: 14px;
+    }
+  }
+
+  /* ------------ footer  --------------------*/
+  
+  .footer {
+    padding: 0 0 20px;
+    &__inner {
+      flex-direction: column;
+    }
+    &__link {
+      &_up {
+        padding-left: 0;
+      }
+    }
+    &__right {
+      max-width: 100%;
+      transform: translateY(42px);
+      order: -1;
+    }
+    &__icon {
+      padding-right: 0;
+    }
+    &__center {
+      gap: 40px;
     }
   }
 }
