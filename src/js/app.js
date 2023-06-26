@@ -65,7 +65,7 @@
 			}
 
 
-		}
+		};
 		requestAnimationFrame(rafAnimation);
 	};
 })();
@@ -103,7 +103,7 @@ const init = () => {
 			height: ${sizeBlock[1]};
 		`;
 
-	}
+	};
 
 	const sizeContainer = () => {
 
@@ -115,12 +115,12 @@ const init = () => {
 		video.style.left = (ww - fw) / 2;
 		video.style.top = (wh - fh) / 2;
 		overlay.style.height = document.documentElement.clientHeight;
-	}
+	};
 
 	const sizeVideoTubeModal = () => {
 		sizeContainer();
 		sizeVideo();
-	}
+	};
 
 	const closeVideoTubeModal = () => {
 
@@ -188,6 +188,6 @@ const init = () => {
 	overlay.addEventListener("click", closeVideoTubeModal);
 	document.addEventListener('click', openVideoTubeModal);
 
-}
+};
 
 document.addEventListener('DOMContentLoaded', init);

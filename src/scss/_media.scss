@@ -541,6 +541,22 @@
       gap: 60px;
     }
   }
+
+  /* ------------ modal  --------------------*/
+
+  .modal {
+    &__inner {
+      padding: 0;
+      border: none;
+    }
+    &__title {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+    &__img {
+      margin: 0 auto 25px;
+    }
+  }
 }
 
 @media (max-width: 560px) {
@@ -744,6 +760,18 @@
     }
     &__center {
       gap: 40px;
+    }
+  }
+
+  /* ------------ modal  --------------------*/
+
+  .modal {
+    &__main {
+      padding: 0;
+    }
+    &__close {
+      top: -35px;
+      right: 0;
     }
   }
 }

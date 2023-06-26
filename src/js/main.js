@@ -48,8 +48,6 @@
   };
 
   initSlider();
-  
-  // видео 
 
   // slider steps
 
@@ -87,6 +85,7 @@
 const modalController = ({modal, btnOpen, btnClose, time = 300}) => {
   const buttonElems = document.querySelectorAll(btnOpen);
   const modalElem = document.querySelector(modal);
+  const modalBtn = document.querySelector('.modal__btn');
 
   modalElem.style.cssText = `
       display: flex;
@@ -126,6 +125,8 @@ const modalController = ({modal, btnOpen, btnClose, time = 300}) => {
     });
     
     modalElem.addEventListener('click', closeModal);
+    modalBtn.addEventListener('click', closeModal);
+    
 };
 
 modalController({
@@ -136,7 +137,21 @@ modalController({
 });
 
 modalController({
+  modal: '.modal1',
+  btnOpen: '.contact__btn',
+  btnClose: '.modal__close',
+  
+});
+
+modalController({
   modal: '.modal2',
   btnOpen: '.popular__btn',
   btnClose: '.modal__close'
 });
+
+// маска для телефона
+
+const phones = document.querySelectorAll('input[type="tel"]');
+
+const im = new Inputmask('+7 (999) 999-99-99');
+im.mask(phones);
