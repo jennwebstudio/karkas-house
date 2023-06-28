@@ -1,24 +1,28 @@
 
-  const isDrop = document.querySelector('.is-drop');
-  const dropDown = document.querySelector('.dropdown');
-  const arrowIcon = document.querySelector('.arrow-icon');
+  
   const menu = document.querySelector('.menu');
   const menuIcon = document.querySelector('.menu__icon');
 
   // dropdown меню
 
-  isDrop.addEventListener('click', () => {
-    dropDown.classList.toggle('dropdown--active');
-    arrowIcon.classList.toggle('arrow-icon--active');
-  });
+  if (document.querySelector('.is-drop')) {
+    const isDrop = document.querySelector('.is-drop');
+    const dropDown = document.querySelector('.dropdown');
+    const arrowIcon = document.querySelector('.arrow-icon');
 
-  document.addEventListener('click', (e) => {   
-    if (!e.target.closest('.menu')) {
-      //  если клик был не по menu, не по его дочерним элементам
-      dropDown.classList.remove('dropdown--active');
-      arrowIcon.classList.remove('arrow-icon--active');
-    }
-  });
+    isDrop.addEventListener('click', () => {
+      dropDown.classList.toggle('dropdown--active');
+      arrowIcon.classList.toggle('arrow-icon--active');
+    });
+
+    document.addEventListener('click', (e) => {   
+      if (!e.target.closest('.menu')) {
+        //  если клик был не по menu, не по его дочерним элементам
+        dropDown.classList.remove('dropdown--active');
+        arrowIcon.classList.remove('arrow-icon--active');
+      }
+    });
+  }
   
   // мобильное меню
 
@@ -26,16 +30,22 @@
     menu.classList.toggle('menu--active');
   });
 
-  const links = Array.from(menu.children);
-  links.forEach((link) => {
-    link.addEventListener('click', () => {
+  menu.addEventListener('click', (event) => {
+    event.preventDefault();
+    console.log('event.target: ', event.target);
+    if (event.target && event.target.matches(".link-ancor")) {
       menu.classList.remove('menu--active');
-    });
-  });
+
+      smoothScroll(event.target);
+    } else if (!event.target.closest('.is-drop')) {
+      window.location.href = event.target.getAttribute('href');
+    }
+  });  
 
   // слайдер hero
 
-  const initSlider = () => {
+  if (document.querySelector('.header__hero-slider')) {
+    const initSlider = () => {
     new Swiper ('.swiper', {
       
       loop: true,
@@ -48,44 +58,46 @@
   };
 
   initSlider();
+  }
 
   // slider steps
 
-  let slider = $('.steps__inner');
+  if (document.querySelector('.steps')) {
+    let slider = $('.steps__inner');
 
-  slider.slick({
-    infinite: false,
-    dots: true,
-    prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrow.svg" alt="left arrow"></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrow.svg" alt="right arrow"></button>',
-    customPaging : function(slider, i) {
-      var thumb = $(slider.$slides[i]).data();
+    slider.slick({
+      infinite: false,
+      dots: true,
+      prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrow.svg" alt="left arrow"></button>',
+      nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrow.svg" alt="right arrow"></button>',
+      customPaging : function(slider, i) {
+        var thumb = $(slider.$slides[i]).data();
 
-      return 'этап ' + (i + 1);
-    },
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: {
-          arrows: false,
-        }
+        return 'этап ' + (i + 1);
       },
-      {
-        breakpoint: 1180,
-        settings: {
-          arrows: false,
-        }
-      },
-      
-    ]
-  });
+      responsive: [
+        {
+          breakpoint: 1280,
+          settings: {
+            arrows: false,
+          }
+        },
+        {
+          breakpoint: 1180,
+          settings: {
+            arrows: false,
+          }
+        },
+      ]
+    });
+  }
 
 // popup
 
-const modalController = ({modal, btnOpen, btnClose, time = 300}) => {
+const modalController = ({modal, btnOpen, btnClose, modalBtn, time = 300}) => {
   const buttonElems = document.querySelectorAll(btnOpen);
   const modalElem = document.querySelector(modal);
-  const modalBtn = document.querySelector('.modal__btn');
+  const modalButton = document.querySelector(modalBtn);
 
   modalElem.style.cssText = `
       display: flex;
@@ -125,29 +137,34 @@ const modalController = ({modal, btnOpen, btnClose, time = 300}) => {
     });
     
     modalElem.addEventListener('click', closeModal);
-    modalBtn.addEventListener('click', closeModal);
+    modalButton.addEventListener('click', closeModal);
     
 };
 
-modalController({
-  modal: '.modal1',
-  btnOpen: '.action__btn',
-  btnClose: '.modal__close',
-  
-});
+if (document.querySelector('.modal1')) {
+  modalController({
+    modal: '.modal1',
+    btnOpen: '.action__btn',
+    btnClose: '.modal__close',
+    modalBtn: '.modal__btn'
+  });
 
-modalController({
-  modal: '.modal1',
-  btnOpen: '.contact__btn',
-  btnClose: '.modal__close',
-  
-});
+  modalController({
+    modal: '.modal1',
+    btnOpen: '.contact__btn',
+    btnClose: '.modal__close',
+    modalBtn: '.modal__btn'
+  });
+}
 
-modalController({
-  modal: '.modal2',
-  btnOpen: '.popular__btn',
-  btnClose: '.modal__close'
-});
+if (document.querySelector('.modal2')) {
+  modalController({
+    modal: '.modal2',
+    btnOpen: '.popular__btn',
+    btnClose: '.modal__close',
+    modalBtn: '.modal__btn'
+  });
+}
 
 // маска для телефона
 
@@ -155,3 +172,14 @@ const phones = document.querySelectorAll('input[type="tel"]');
 
 const im = new Inputmask('+7 (999) 999-99-99');
 im.mask(phones);
+
+//  плавный скролл
+
+function smoothScroll(selector) {
+  const id = selector.getAttribute('href');
+
+  document.querySelector(id).scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+	});
+}
