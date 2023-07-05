@@ -2,6 +2,8 @@
   
   const menu = document.querySelector('.menu');
   const menuIcon = document.querySelector('.menu__icon');
+  const footLogo = document.querySelector('.footer__logo');
+  const footerMenu = document.querySelector('.footer__menu');
 
   // dropdown меню
 
@@ -32,7 +34,6 @@
 
   menu.addEventListener('click', (event) => {
     event.preventDefault();
-    console.log('event.target: ', event.target);
     if (event.target && event.target.matches(".link-ancor")) {
       menu.classList.remove('menu--active');
 
@@ -41,6 +42,20 @@
       window.location.href = event.target.getAttribute('href');
     }
   });  
+
+  footLogo.addEventListener('click', (event) => {
+    event.preventDefault();    
+    smoothScroll(event.target.closest('.footer__logo'));
+  });
+
+  footerMenu.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (event.target && event.target.matches(".link-ancor")) {
+      smoothScroll(event.target);
+    } else {
+      window.location.href = event.target.getAttribute('href');
+    }
+  });
 
   // слайдер hero
 
@@ -152,6 +167,13 @@ if (document.querySelector('.modal1')) {
   modalController({
     modal: '.modal1',
     btnOpen: '.contact__btn',
+    btnClose: '.modal__close',
+    modalBtn: '.modal__btn'
+  });
+
+  modalController({
+    modal: '.modal1',
+    btnOpen: '.call-link',
     btnClose: '.modal__close',
     modalBtn: '.modal__btn'
   });

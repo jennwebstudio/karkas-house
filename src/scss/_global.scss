@@ -75,6 +75,52 @@ h1.dark-theme {
   font-size: 14px;
 }
 
+.is-current {
+  border-bottom: 2px solid #fff;
+  cursor: no-drop;
+}
+
+.crambl {
+  padding-top: -35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  &__item {
+    position: relative;
+    padding-right: 20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-top: 2px solid $accent;
+      border-left: 2px solid $accent;
+      top: 30%;
+      right: 0;
+      z-index: 1;
+      transform: rotate(135deg);
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    @extend %montserrat-500;
+    font-size: 20px;
+    color: $default;
+  }
+}
+
 @media (max-width: 1280px) {
   .section-offset {
     margin-bottom: 80px;
@@ -105,6 +151,12 @@ h1.dark-theme {
   }
   .title {
     font-size: 18px;
+  }
+  .crambl {
+    padding-top: -15px;
+    &__link {
+      font-size: 16px;
+    }
   }
 }
 

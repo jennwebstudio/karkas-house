@@ -29,11 +29,16 @@
       font-size: 20px;
       align-self: flex-end;
     }
+
+    .span {
+      @extend %montserrat-500;
+      font-size: 20px;
+    }
   }
 
   &__video-popup {
+    border-radius: 8px;
     min-height: 335px;
-    background: url('../images/why/video-bg.jpg') no-repeat center/cover;
     display: flex;
     justify-content: center;
     align-items: center;

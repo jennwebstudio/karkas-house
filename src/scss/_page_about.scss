@@ -1,0 +1,57 @@
+.page-about {
+  
+  &__hero {
+    margin-top: -120px;
+    height: 285px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+
+  &__header {
+    text-align: center;
+    padding-top: 165px;
+  }
+
+  &__description {
+    padding-bottom: 30px;
+  }
+
+  &__achivements {
+    background: url('../images/page_about/achivements-bg.jpg') center/cover no-repeat;
+    padding: 50px 100px;
+  }
+
+  &__figures {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  &__point {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__num {
+    @extend %hyundai-700;
+    font-size: 32px;
+    letter-spacing: 0.8;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 17px;
+  }
+
+  &__note {
+    @extend %montserrat-700;
+    font-size: 20px;
+    color: $second;
+    text-align: center;
+  }
+}

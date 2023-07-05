@@ -188,14 +188,6 @@
     }
   }
 
-  /* ------------  action sction --------------------*/
-
-  .action {
-    &__content {
-
-    }
-  }
-
   /* ------------  form  --------------------*/
 
   .form {
@@ -231,6 +223,14 @@
     background-position: right 35% bottom;
     &__info {
       padding: 0 20px;
+    }
+  }
+
+  /* ------------ page_about  --------------------*/
+
+  .page-about {
+    &__achivements {
+      padding: 50px;
     }
   }
 }
@@ -399,11 +399,28 @@
       display: none;
     }
     &__link {
-    &_up {
-      padding-left: 35px;
+      &_up {
+        padding-left: 35px;
+      }
     }
   }
-  }
+
+    /* ------------ page_about  --------------------*/
+  
+    .page-about {
+      &__description {
+        padding-bottom: 0;
+      }
+      &__achivements {
+        padding: 40px 20px;
+      }
+      &__point {
+        width: 175px;
+      }
+      &__note {
+        font-size: 16px;
+      }
+    }
 }
 
 @media (max-width: 680px) {
@@ -555,6 +572,27 @@
     }
     &__img {
       margin: 0 auto 25px;
+    }
+  }
+
+  /* ------------ page_about  --------------------*/
+  
+  .page-about {
+    &__achivements {
+      padding: 0;
+    }
+    &__figures {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      gap: 25px;
+    }
+    &__point {
+      img {
+        margin-bottom: 15px;
+      }
+    }
+    &__num {
+      margin-bottom: 5px;
     }
   }
 }
@@ -772,6 +810,17 @@
     &__close {
       top: -35px;
       right: 0;
+    }
+  }
+
+  /* ------------ page_about  --------------------*/
+
+  .page-about {
+    &__crambl {
+      padding-top: -15px;
+    }
+    &__figures {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
