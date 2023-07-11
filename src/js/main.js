@@ -43,7 +43,7 @@
     }
   });  
 
-  footLogo.addEventListener('click', (event) => {
+ /* footLogo.addEventListener('click', (event) => {
     event.preventDefault();    
     smoothScroll(event.target.closest('.footer__logo'));
   });
@@ -55,7 +55,7 @@
     } else {
       window.location.href = event.target.getAttribute('href');
     }
-  });
+  });*/
 
   // слайдер hero
 
@@ -103,6 +103,27 @@
             arrows: false,
           }
         },
+      ]
+    });
+  }
+
+// reviews slider
+
+if (document.querySelector('.reviews')) {
+    let slider = $('.reviews__inner');
+
+    slider.slick({
+      infinite: true,
+      dots: true,
+      prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrow.svg" alt="left arrow"></button>',
+      nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrow.svg" alt="right arrow"></button>',
+      responsive: [
+        {
+          breakpoint: 680,
+          settings: {
+            arrows: false,
+          }
+        }
       ]
     });
   }
