@@ -94,6 +94,12 @@
     &:hover {
       border-bottom: 2px solid #fff;
     }
+
+    &.is-current {
+      .menu__link {
+        cursor: no-drop;
+      }
+    }
   }
 
   .arrow-icon {
@@ -125,7 +131,7 @@
     z-index: 2;
   }
   &-call {
-    display: none;
+    //display: none;
   }
 }
 

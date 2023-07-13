@@ -2,8 +2,8 @@
   
   const menu = document.querySelector('.menu');
   const menuIcon = document.querySelector('.menu__icon');
-  const footLogo = document.querySelector('.footer__logo');
   const footerMenu = document.querySelector('.footer__menu');
+  const footerLinkUp = document.querySelector('.footer__link_up');
 
   // dropdown меню
 
@@ -41,11 +41,12 @@
     } else if (!event.target.closest('.is-drop')) {
       window.location.href = event.target.getAttribute('href');
     }
-  });  
-
- /* footLogo.addEventListener('click', (event) => {
-    event.preventDefault();    
-    smoothScroll(event.target.closest('.footer__logo'));
+  }); 
+  
+  footerLinkUp.addEventListener('click', (event) => {
+    event.preventDefault();
+    smoothScroll(event.target.closest('.footer__link_up'));
+    
   });
 
   footerMenu.addEventListener('click', (event) => {
@@ -55,7 +56,7 @@
     } else {
       window.location.href = event.target.getAttribute('href');
     }
-  });*/
+  });
 
   // слайдер hero
 
@@ -204,6 +205,13 @@ if (document.querySelector('.modal2')) {
   modalController({
     modal: '.modal2',
     btnOpen: '.popular__btn',
+    btnClose: '.modal__close',
+    modalBtn: '.modal__btn'
+  });
+
+  modalController({
+    modal: '.modal2',
+    btnOpen: '.team__btn',
     btnClose: '.modal__close',
     modalBtn: '.modal__btn'
   });

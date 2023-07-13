@@ -936,9 +936,7 @@
   /* ------------ page_about  --------------------*/
 
   .page-about {
-    &__crambl {
-      padding-top: -15px;
-    }
+    
     &__figures {
       grid-template-columns: repeat(1, 1fr);
     }
