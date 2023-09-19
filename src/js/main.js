@@ -224,6 +224,21 @@ const phones = document.querySelectorAll('input[type="tel"]');
 const im = new Inputmask('+7 (999) 999-99-99');
 im.mask(phones);
 
+// фильтр цены
+
+$('.filter-price__input').ionRangeSlider({
+  //type: "double",
+  //prefix: "$",
+  onStart: function (data) {
+    $('.filter-price__from').text(data.from);
+    $('.filter-price__to').text(data.to);
+  },
+  onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+  },
+});
+
 //  плавный скролл
 
 function smoothScroll(selector) {

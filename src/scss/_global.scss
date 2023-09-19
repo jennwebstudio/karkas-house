@@ -68,6 +68,27 @@ h1.dark-theme {
   box-shadow: -5px -5px 15px rgba(67, 186, 84, 0.5), 5px 5px 15px rgba(67, 186, 84, 0.5);
 }
 
+.button-outlined {
+  cursor: pointer;
+  padding: 12px 34px;
+  background-color: #fff;
+  border: 1px solid $golden;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(180, 136, 17, 0.5);
+  color: $golden;
+  @extend %montserrat-700;
+  font-size: 14px;
+  line-height: 1.2;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $golden;
+      color: #fff;
+    }
+  }
+}
+
 .call-link {
   display: block;
   padding: 12px 25px;
@@ -118,6 +139,14 @@ h1.dark-theme {
     font-size: 20px;
     color: $default;
   }
+}
+
+@mixin checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }
 
 @media (max-width: 1280px) {

@@ -68,6 +68,331 @@
 
   <main class="main">
 
+    <section class="catalog section-offset">
+      <div class="catalog__container">
+
+        <div class="catalog__inner">
+          <div class="catalog__aside">
+            <div class="catalog__filters filter">
+            
+              <div class="filter__item filter-price">
+                <h3 class="filter__title">Цена</h3>
+                <form class="filter-price__form" action="#">
+                  <input class="filter-price__input" type="text" data-type="double" data-min="0" data-max="10000000"
+                    data-from="1200000" data-to="8892000" data-grid="true">
+                  <label class="filter-price__label">
+                    <span>
+                      ₽ <span class="filter-price__from"></span> -
+                      ₽ <span class="filter-price__to"></span>
+                    </span>
+                  </label>
+                  <button class="filter-price__btn button-outlined" type="submit">Показать</button>
+                </form>
+              </div>
+            
+              <div class="filter__item filter-type">
+                <h3 class="filter__title">Тип проекта</h3>
+                <form class="filter-type__form" action="#">
+                  <label class="filter-type__label">
+                    <input class="filter-type__input" type="checkbox">
+                    <div class="filter-type__checkbox">Зимние</div>
+                  </label>
+                  <label class="filter-type__label">
+                    <input class="filter-type__input" type="checkbox">
+                    <div class="filter-type__checkbox">Круглогодичные</div>
+                  </label>
+                  <label class="filter-type__label">
+                    <input class="filter-type__input" type="checkbox">
+                    <div class="filter-type__checkbox">Дачные</div>
+                  </label>
+                  <label class="filter-type__label">
+                    <input class="filter-type__input" type="checkbox">
+                    <div class="filter-type__checkbox">С гаражом</div>
+                  </label>
+                  <label class="filter-type__label">
+                    <input class="filter-type__input" type="checkbox">
+                    <div class="filter-type__checkbox">С верандой</div>
+                  </label>
+                  <label class="filter-type__label">
+                    <input class="filter-type__input" type="checkbox">
+                    <div class="filter-type__checkbox">Недорогие</div>
+                  </label>
+                </form>
+              </div>
+            
+              <div class="filter__item filter-square">
+                <h3 class="filter__title">Площадь</h3>
+                <form class="filter-square__form" action="#">
+                  <label class="filter-square__label">
+                    <input class="filter-square__input" type="checkbox">
+                    <span class="filter-square__checkbox"></span>
+                    <span class="filter-square__text">до 100 кв.м</span>
+                  </label>
+                  <label class="filter-square__label">
+                    <input class="filter-square__input" type="checkbox">
+                    <span class="filter-square__checkbox"></span>
+                    <span class="filter-square__text">до 150 кв.м</span>
+                  </label>
+                  <label class="filter-square__label">
+                    <input class="filter-square__input" type="checkbox">
+                    <span class="filter-square__checkbox"></span>
+                    <span class="filter-square__text">до 200 кв.м</span>
+                  </label>
+                  <label class="filter-square__label">
+                    <input class="filter-square__input" type="checkbox">
+                    <span class="filter-square__checkbox"></span>
+                    <span class="filter-square__text">до 250 кв.м</span>
+                  </label>
+                </form>
+              </div>
+            
+              <div class="filter__item filter-size">
+                <h3 class="filter__title">Размеры</h3>
+                <form class="filter-size__form" action="#">
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox">10x10</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox">12x12</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox">10x6</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox">6x7</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox">6x6</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox">6x8</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox">7x8</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox">8x8</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox">8x9</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__checkbox">9x9</span>
+                  </label>
+                </form>
+              </div>
+            
+              <div class="filter__item filter-square">
+                <h3 class="filter__title">Количество этажей</h3>
+                <form class="filter-square__form" action="#">
+                  <label class="filter-square__label">
+                    <input class="filter-square__input" type="checkbox">
+                    <span class="filter-square__checkbox"></span>
+                    <span class="filter-square__text">одноэтажный</span>
+                  </label>
+                  <label class="filter-square__label">
+                    <input class="filter-square__input" type="checkbox">
+                    <span class="filter-square__checkbox"></span>
+                    <span class="filter-square__text">с мансардой</span>
+                  </label>
+                  <label class="filter-square__label">
+                    <input class="filter-square__input" type="checkbox">
+                    <span class="filter-square__checkbox"></span>
+                    <span class="filter-square__text">двухэтажный</span>
+                  </label>
+                </form>
+              </div>
+            </div>
+            
+            <div class="banner">
+              <div class="banner__inner">
+                <p class="banner__suptitle">СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ</p>
+                <h4 class="banner__title">СКИДКА НА ПРОЕКТИРОВАНИЕ ДАЧНОГО ДОМА</h4>
+                <p class="banner__num">30%</p>
+                <a class="banner__btn solid-button" href="#">получить консультацию</a>
+                <p class="banner__subtitle">Акция действует до 31 июля</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="catalog__content">
+            <div class="catalog__content-inner">
+
+              <div class="popular__item card-item">
+                <img class="card-item__img" src="images/popular/card01.jpg" alt="фото дома">
+                <div class="card-item__content">
+                  <a class="card-item__title" href="#">
+                    <p>Двухэтажный каркасный дом 8х9</p>
+                  </a>
+                  <p class="card-item__description">Площадь 142 кв.м</p>
+                  <div class="card-item__price">
+                    <span class="card-item__name">Стоимость:</span>
+                    <div class="card-item__price-value">
+                      <div class="card-item__value">от <span>4 789 930</span>р.</div>
+                      <div class="card-item__value_old">6 250 000 р.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="popular__item card-item">
+                <img class="card-item__img" src="images/popular/card01.jpg" alt="фото дома">
+                <div class="card-item__content">
+                  <a class="card-item__title" href="#">
+                    <p>Двухэтажный каркасный дом 8х9</p>
+                  </a>
+                  <p class="card-item__description">Площадь 142 кв.м</p>
+                  <div class="card-item__price">
+                    <span class="card-item__name">Стоимость:</span>
+                    <div class="card-item__price-value">
+                      <div class="card-item__value">от <span>4 789 930</span>р.</div>
+                      <div class="card-item__value_old">6 250 000 р.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="popular__item card-item">
+                <img class="card-item__img" src="images/popular/card01.jpg" alt="фото дома">
+                <div class="card-item__content">
+                  <a class="card-item__title" href="#">
+                    <p>Двухэтажный каркасный дом 8х9</p>
+                  </a>
+                  <p class="card-item__description">Площадь 142 кв.м</p>
+                  <div class="card-item__price">
+                    <span class="card-item__name">Стоимость:</span>
+                    <div class="card-item__price-value">
+                      <div class="card-item__value">от <span>4 789 930</span>р.</div>
+                      <div class="card-item__value_old">6 250 000 р.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="popular__item card-item">
+                <img class="card-item__img" src="images/popular/card01.jpg" alt="фото дома">
+                <div class="card-item__content">
+                  <a class="card-item__title" href="#">
+                    <p>Двухэтажный каркасный дом 8х9</p>
+                  </a>
+                  <p class="card-item__description">Площадь 142 кв.м</p>
+                  <div class="card-item__price">
+                    <span class="card-item__name">Стоимость:</span>
+                    <div class="card-item__price-value">
+                      <div class="card-item__value">от <span>4 789 930</span>р.</div>
+                      <div class="card-item__value_old">6 250 000 р.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="popular__item card-item">
+                <img class="card-item__img" src="images/popular/card01.jpg" alt="фото дома">
+                <div class="card-item__content">
+                  <a class="card-item__title" href="#">
+                    <p>Двухэтажный каркасный дом 8х9</p>
+                  </a>
+                  <p class="card-item__description">Площадь 142 кв.м</p>
+                  <div class="card-item__price">
+                    <span class="card-item__name">Стоимость:</span>
+                    <div class="card-item__price-value">
+                      <div class="card-item__value">от <span>4 789 930</span>р.</div>
+                      <div class="card-item__value_old">6 250 000 р.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="popular__item card-item">
+                <img class="card-item__img" src="images/popular/card01.jpg" alt="фото дома">
+                <div class="card-item__content">
+                  <a class="card-item__title" href="#">
+                    <p>Двухэтажный каркасный дом 8х9</p>
+                  </a>
+                  <p class="card-item__description">Площадь 142 кв.м</p>
+                  <div class="card-item__price">
+                    <span class="card-item__name">Стоимость:</span>
+                    <div class="card-item__price-value">
+                      <div class="card-item__value">от <span>4 789 930</span>р.</div>
+                      <div class="card-item__value_old">6 250 000 р.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="popular__item card-item">
+                <img class="card-item__img" src="images/popular/card01.jpg" alt="фото дома">
+                <div class="card-item__content">
+                  <a class="card-item__title" href="#">
+                    <p>Двухэтажный каркасный дом 8х9</p>
+                  </a>
+                  <p class="card-item__description">Площадь 142 кв.м</p>
+                  <div class="card-item__price">
+                    <span class="card-item__name">Стоимость:</span>
+                    <div class="card-item__price-value">
+                      <div class="card-item__value">от <span>4 789 930</span>р.</div>
+                      <div class="card-item__value_old">6 250 000 р.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="popular__item card-item">
+                <img class="card-item__img" src="images/popular/card01.jpg" alt="фото дома">
+                <div class="card-item__content">
+                  <a class="card-item__title" href="#">
+                    <p>Двухэтажный каркасный дом 8х9</p>
+                  </a>
+                  <p class="card-item__description">Площадь 142 кв.м</p>
+                  <div class="card-item__price">
+                    <span class="card-item__name">Стоимость:</span>
+                    <div class="card-item__price-value">
+                      <div class="card-item__value">от <span>4 789 930</span>р.</div>
+                      <div class="card-item__value_old">6 250 000 р.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="pagination">
+              <a class="pagination__prev pagination__item pagination__arrow" href="#"></a>
+              <ul class="pagination__list">
+                <li class="pagination__item pagination__item_active">
+                  <a class="pagination__link" href="#">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">4</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">5</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#"><span>....</span></a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">15</a>
+                </li>
+              </ul>
+              <a class="pagination__next pagination__item pagination__arrow" href="#"></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="contact" id="contact">
       <div class="contact__container">
         <div class="contact__inner">

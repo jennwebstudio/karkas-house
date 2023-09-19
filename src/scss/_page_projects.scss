@@ -1,3 +1,301 @@
-.page-projects {
 
+.catalog {
+  
+  &__inner {
+    display: flex;
+  }
+
+  &__aside {
+    max-width: 410px;
+    margin-right: 30px;
+  }
+
+  &__filters {
+    width: 100%;   
+    padding: 60px 30px;
+    border-radius: 8px;
+    background: rgba(242, 242, 242, 0.20);
+    box-shadow: 4px -4px 15px 0px rgba(0, 0, 0, 0.15), -4px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    width: 100%;
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .card-item {
+        margin-bottom: 45px;
+      }
+    }
+  }
+}
+
+.filter {
+  &__item {
+    margin-bottom: 70px;
+  }
+
+  &__title {
+    @extend %montserrat-700;
+    color: $second;
+    font-size: 24px;
+    margin-bottom: 35px;
+  }
+}
+
+.filter-price {
+  &__input {
+    width: 100%;
+    
+  }
+
+  &__label {
+    display: block;
+    width: 100%;
+    margin-top: 35px;
+  }
+
+  &__from,
+  &__to {
+    @extend %montserrat-500;
+    font-size: 24px;
+  }
+
+  &__btn {
+    display: block;
+    margin-top: 15px;
+  }
+}
+
+.filter-type {
+  &__label {
+    display: block;
+    padding: 9px;
+    background-image: url('../images/icons/arrow-plain.svg');
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    transition: background-color .3s ease;
+
+    &:hover {
+      background-color: #f2f2f2;
+    }
+  }
+  &__input {
+    @include checkbox-hidden;
+    &:checked+.filter-type__checkbox {
+        background-color: #f2f2f2;
+    }
+  }
+
+  &__checkbox {
+    @extend %montserrat-600;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding-left: 15px;
+  }
+}
+
+.irs--flat {
+  height: 30px;
+}
+
+.irs--flat .irs-line {
+  top: 13px;
+  height: 5px;
+  background-color: #ececec;
+  border-radius: 0;
+}
+
+.irs--flat .irs-handle {
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 4px solid $accent;
+  border-radius: 8px;
+  box-shadow: 0px 0px 13px 0px rgba(90, 90, 90, 0.2);
+}
+
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+}
+
+.irs--flat .irs-bar {
+  top: 13px;
+  height: 5px;
+  background-color: $accent;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max,
+.irs--flat .irs-from,
+.irs--flat .irs-to {
+  display: none;
+}
+
+.filter-square {
+  &__label {
+    display: block;
+    padding-left: 35px;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    font-size: 24px;
+    margin-left: 45px;
+  }
+
+  &__input {
+    @include checkbox-hidden;
+    &:checked + .filter-square__checkbox {
+      background-image: url('../images/icons/check-square.svg');
+      border: none;
+      & + .filter-square__text {
+        color: $accent;
+      }
+    }
+  }
+
+  &__checkbox {
+    width: 25px;
+    height: 25px;
+    border: 1px solid $accent;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: -35px;
+    margin-top: 4px;
+  }
+}
+
+.filter-size {
+  &__label {
+    display: inline-block;
+    margin-bottom: 9px;
+    margin-right: 9px;
+    padding: 13px 0;
+    cursor: pointer;
+  }
+
+  &__input {
+    @include checkbox-hidden;
+    &:checked + .filter-size__checkbox {
+      background-color: $golden;
+      border-color: $golden;
+      color: #fff;
+    }
+  }
+
+  &__checkbox {
+    color: $golden;
+    @extend %montserrat-500;
+    font-size: 20px;
+    border: 1px solid $golden;
+    padding: 13px;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+
+  &__list {
+    display: flex;
+    gap: 15px;
+    padding: 0 20px;
+  }
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    border: 2px solid $golden;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+
+    &_active {
+      background-color: $golden;
+
+      .pagination__link {
+        color: #fff;
+      }
+    }
+  }
+
+  &__link {
+    color: $golden;
+    @extend %montserrat-600;
+    font-size: 20px;
+  }
+
+  &__arrow {
+    background-image: url(../images/icons/arrow-golden.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__prev {
+    margin-right: 30px;
+    transform: rotate(180deg);
+  }
+
+  &__next {
+    margin-left: 30px;
+  }
+}
+
+.banner {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid $golden;
+  box-shadow: 4px 4px 10px 0px rgba(180, 136, 17, 0.50), -4px -2px 10px 0px rgba(180, 136, 17, 0.50);
+  background: url('../images/banner-aside.jpg') center/cover no-repeat;
+  padding: 20px 25px 90px 0;
+
+  &__inner {
+    border-radius: 0px 46px 46px 0px;
+    background: linear-gradient(129deg, #FFF 10.96%, rgba(255, 255, 255, 0.00) 108.27%);
+    padding: 15px 27px 40px 15px;
+  }
+
+  &__suptitle {
+    @extend %montserrat-600;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    max-width: 342px;
+    @extend %hyundai-700;
+    font-size: 20px;
+    color: $second;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+
+  &__num {
+    color: #F33E3F;
+    @extend %montserrat-600;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    display: block;
+    width: 250px;
+    padding: 12px 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+  }
 }

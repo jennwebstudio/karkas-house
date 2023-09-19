@@ -29,7 +29,7 @@
 
   &__list {
     display: grid;
-    justify-content: center;
+    justify-self: center;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 45px 40px;
@@ -77,23 +77,7 @@
 
   &__btn {
     display: inline-block;
-    padding: 12px 34px;
-    background-color: #fff;
-    border: 1px solid $golden;
-    border-radius: 8px;
-    box-shadow: 0px 2px 6px rgba(180, 136, 17, 0.5);
-    color: $golden;
-    @extend %montserrat-700;
-    font-size: 14px;
-    line-height: 1.2;
     margin-top: 5px;
-    transition: background-color .3s ease-in-out, color .3s ease-in-out;
-    @media (any-hover: hover) {
-      &:hover {
-        background-color: $golden;
-        color: #fff;
-      }
-    }
   }
 }
 
