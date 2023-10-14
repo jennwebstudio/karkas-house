@@ -199,6 +199,13 @@ if (document.querySelector('.modal1')) {
     btnClose: '.modal__close',
     modalBtn: '.modal__btn'
   });
+
+  modalController({
+    modal: '.modal1',
+    btnOpen: '.banner__btn',
+    btnClose: '.modal__close',
+    modalBtn: '.modal__btn'
+  });
 }
 
 if (document.querySelector('.modal2')) {
@@ -224,20 +231,93 @@ const phones = document.querySelectorAll('input[type="tel"]');
 const im = new Inputmask('+7 (999) 999-99-99');
 im.mask(phones);
 
-// фильтр цены
+// фильтры
 
-$('.filter-price__input').ionRangeSlider({
-  //type: "double",
-  //prefix: "$",
-  onStart: function (data) {
-    $('.filter-price__from').text(data.from);
-    $('.filter-price__to').text(data.to);
-  },
-  onChange: function (data) {
+if ($('.catalog')) {
+
+  $('.catalog__btn').on('click', function () {
+    $('.catalog__filters').toggleClass('catalog__filters--active');
+  });
+
+  $('.filter-price__input').ionRangeSlider({
+    //type: "double",
+    //prefix: "$",
+    onStart: function (data) {
       $('.filter-price__from').text(data.from);
       $('.filter-price__to').text(data.to);
-  },
-});
+    },
+    onChange: function (data) {
+        $('.filter-price__from').text(data.from);
+        $('.filter-price__to').text(data.to);
+    },
+  });
+}
+
+// pop-projects slider
+
+if (document.querySelector('.pop-projects')) {
+    let slider = $('.pop-projects__inner');
+
+    slider.slick({
+      infinite: true,
+      dots: true,
+      slidesToShow: 3,
+			slidesToScroll: 1,
+      prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrow.svg" alt="left arrow"></button>',
+      nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrow.svg" alt="right arrow"></button>',
+      responsive: [
+        {
+          breakpoint: 980,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 680,
+          settings: {
+            slidesToShow: 1,
+            arrows: false,
+          }
+        }
+      ]
+    });
+  }
+
+// product slider
+
+if ($('.product')) {
+  let sliderThumb = $('.product__thumb');
+  let sliderBig = $('.product__big');
+
+  sliderThumb.slick({
+    asNavFor: '.product__big',
+    focusOnSelect: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    draggable: false
+  });
+
+  sliderBig.slick({
+    asNavFor: '.product__thumb',
+    draggable: false,
+    arrows: false,
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 981,
+        settings: {
+          draggable: true,
+        }
+      },
+      {
+        breakpoint: 681,
+        settings: {
+          dots: true,
+        }
+      },
+    ]
+  });
+}
 
 //  плавный скролл
 
