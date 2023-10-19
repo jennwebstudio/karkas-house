@@ -103,6 +103,7 @@ h1.dark-theme {
 .crambl {
   padding-top: -35px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -158,6 +159,9 @@ h1.dark-theme {
 @media (max-width: 980px) {
   .section-offset {
     margin-bottom: 60px;
+  }
+  .crambl {
+    gap: 8px 20px;
   }
 }
 
