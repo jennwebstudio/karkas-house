@@ -704,6 +704,16 @@
       font-size: 18px;
     }
   }
+
+  /* ------------ page_404 --------------------*/
+
+  .page-404 {
+    background-position: left 35% center;
+    &__inner {
+      margin-left: 20px;
+      margin-right: auto;
+    }
+  }
 }
 
 @media (max-width: 820px) {
@@ -1038,6 +1048,28 @@
   .product-tabs {
     &__item {
       background-position: bottom -10% center;
+    }
+  }
+
+  /* ------------ page_404 --------------------*/
+
+  .page-404 {
+    margin-top: -180px;
+    margin-bottom: 210px;
+    height: 350px;
+    &__container {
+      height: 530px;
+      padding: 350px 0 0;
+    }
+    &__inner {
+      margin-top: 20px;
+      margin-left: auto;
+    }
+    &__title {
+      margin-bottom: 25px;
+    }
+    ul.social-list {
+      display: none;
     }
   }
 }
@@ -1439,6 +1471,19 @@
     }
     &__floor {
       font-size: 14px;
+    }
+  }
+
+  /* ------------ page_404 --------------------*/
+
+  .page-404 {
+    height: 400px;
+    background-position: left 30% center;
+    &__inner {
+      margin-top: 90px;
+    }
+    &__title {
+      font-size: 16px;
     }
   }
 }

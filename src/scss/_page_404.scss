@@ -1,0 +1,46 @@
+.page-404 {
+  
+  background-image: url('../images/page404-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -220px;
+
+  &__pop {
+    margin-top: 100px;
+  }
+
+  &__container {
+    position: relative;
+    height: 100%;
+    padding: 220px 0 340px;
+  }
+
+  &__inner {
+    max-width: 450px;
+    margin-right: 20px;
+    margin-left: auto;
+  }
+
+  &__title {
+    @extend %montserrat-700;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 55px;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    width: 270px;
+    height: 50px;
+    text-align: center;
+    padding: 15px;
+    @extend %montserrat-600;
+  }
+
+  ul.social-list {
+    right: 3%;
+    left: auto;
+  }
+}
